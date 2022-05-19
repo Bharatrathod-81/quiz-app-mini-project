@@ -14,7 +14,7 @@
     flex-wrap: wrap;
 }
 
-.cards{
+.card{
     border: 2px solid;
     background-color: var(--card-color);
     border-radius: 0.5rem;
