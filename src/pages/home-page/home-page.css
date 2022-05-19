@@ -1,0 +1,41 @@
+
+
+.home-heading{
+    color: var(--primary-color);
+
+}
+.home-container{
+    height: 100vh;
+
+}
+
+.card-container{
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.cards{
+    border: 2px solid;
+    background-color: var(--card-color);
+    border-radius: 0.5rem;
+    width: 20.5rem;
+    height: 32vh;
+    cursor: pointer;
+}
+
+.program-img{
+    width: 20rem;
+    height: 20vh;
+    border-radius: 0.5rem;
+    margin-top: 0.2rem;
+}
+
+.card-text{
+    display: block;
+    color: var(--anchor-tag-color);
+}
+
+.cards:hover{
+    transition: .5s;
+    box-shadow: 5px 5px 5px  rgb(140, 140, 148);
+}

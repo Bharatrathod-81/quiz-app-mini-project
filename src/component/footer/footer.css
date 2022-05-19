@@ -1,0 +1,15 @@
+
+.footer-container{
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: 15vh;
+}
+
+.social-site{
+    width: 20%;
+}
+
+a{
+    color: var(--anchor-tag-color);
+    font-size: 35px;
+}
