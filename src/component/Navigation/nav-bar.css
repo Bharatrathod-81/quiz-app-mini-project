@@ -1,0 +1,20 @@
+.nav-body{
+    background-color: var(--primary-color);
+    padding: 1rem 3rem;
+    position: sticky;
+    top: 0%;
+    z-index: 2;
+}
+
+
+.login-Btn{
+    font-weight: bolder;
+    font-size: large;
+    color: var(--secondary-color);
+    border: 2px solid ;
+    border-radius: 0.2rem;
+}
+
+.profile-icon{
+    font-size: 29px;
+}
