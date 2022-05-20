@@ -4,10 +4,7 @@
     color: var(--primary-color);
 
 }
-.home-container{
-    height: 100vh;
 
-}
 
 .card-container{
     width: 100%;
@@ -15,24 +12,27 @@
 }
 
 .card{
-    border: 2px solid;
+    text-decoration: none;
+    border: 2px solid rgba(0, 0, 0, 0.367);
     background-color: var(--card-color);
     border-radius: 0.5rem;
     width: 20.5rem;
-    height: 32vh;
+    height: 33vh;
     cursor: pointer;
 }
 
 .program-img{
-    width: 20rem;
+    width: 19.6rem;
     height: 20vh;
     border-radius: 0.5rem;
-    margin-top: 0.2rem;
+    margin-top: 0.4rem;
 }
 
 .card-text{
     display: block;
+    font-size: 16px;
     color: var(--anchor-tag-color);
+    margin: 0.3rem;
 }
 
 .card:hover{

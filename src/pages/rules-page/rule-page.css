@@ -1,0 +1,22 @@
+
+
+.rule-text{
+    background-color: rgba(194, 192, 192, 0.43);
+    width: 28rem;
+    text-align: start;
+
+}
+
+.btn-container{
+    border: 2px solid;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+}
+
+.start-btn{
+    text-decoration: none;
+    color: var(--anchor-tag-color);
+    font-size: larger;
+    width: 100%;
+}
