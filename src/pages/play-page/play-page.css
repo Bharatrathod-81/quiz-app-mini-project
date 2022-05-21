@@ -1,0 +1,35 @@
+.playPage-container {
+    border: 2px solid;
+    border-radius: 0.2rem;
+
+}
+
+.questionCount{
+    width: 60%;
+}
+
+.option-container {
+    width: 50%;
+} 
+
+.options {
+    border-radius: 0.2rem;
+    border: 2px solid var(--primary-color);
+    width: 80%;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.next-btn{
+    background-color: var(--primary-color);
+    border-radius: 0.2rem;
+    font-weight: bold;
+}
+
+.options:hover{
+    background-color: var(--primary-color);
+}
+
+.options:focus{
+    background-color: var(--primary-color);
+}
