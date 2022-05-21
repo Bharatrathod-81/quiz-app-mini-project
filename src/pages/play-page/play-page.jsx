@@ -20,17 +20,14 @@ const PlayPage = () => {
     const questionsArr = specificGame.questionAndAnswer[nextQues];
 
     const changePage = () => {
-        if(nextQues === 4) {
-            navigate("/")
-        }
         setNextQues(nextQues + 1);
         dispatchScore({ type: "ANSWER", payload: answer })
     }
 
-    if(timeEnd) {
-        navigate("/")
+    if(timeEnd || nextQues === 5) {
+        navigate(`/result/${gameName}`)
     }
-    
+
     return (
         <div className="playPage-container margin-small">
             <div className="margin-Xsmall"><CountDown data={{ setTimeEnd }} /></div>

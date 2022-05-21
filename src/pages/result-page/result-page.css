@@ -1,0 +1,30 @@
+.options-container{
+    border: 2px solid;
+    border-radius: 0.2rem;
+}
+
+.result-option{
+    border-radius: 0.2rem;
+    border: 2px solid var(--primary-color);
+    width: 40%;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.correct-result{
+    border-radius: 0.2rem;
+    border: 2px solid var(--primary-color);
+    background-color: var(--primary-color);
+    width: 40%;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.wrong-result{
+    border-radius: 0.2rem;
+    border: 2px solid red;
+    background-color: red;
+    width: 40%;
+    cursor: pointer;
+    font-size: 15px;
+}
