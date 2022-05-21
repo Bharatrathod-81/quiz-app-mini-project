@@ -6,7 +6,7 @@ import AllRoutes from './Routes/Routes';
 
 function App() {
   return (
-    <div className="App jstfy-spce-btwn flex-column">
+    <div className="App jstfy-spce-btwn  flex-column">
       <NavBar/>
         <AllRoutes/>
       <Footer/>
