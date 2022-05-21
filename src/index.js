@@ -5,15 +5,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { DataBaseProvider } from './contexts/data-context';
+import { ScoreContextProvider } from './contexts/score-context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <DataBaseProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </DataBaseProvider>
+    <ScoreContextProvider>
+      <DataBaseProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </DataBaseProvider>
+    </ScoreContextProvider>
   </React.StrictMode>
 );
 
