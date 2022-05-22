@@ -23,3 +23,9 @@ Link{
 .App {
   text-align: center;
 }
+
+@media only screen and (max-width: 453px) {
+  html{
+    font-size: 14px;
+  }
+}
