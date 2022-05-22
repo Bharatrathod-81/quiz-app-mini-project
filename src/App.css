@@ -24,8 +24,17 @@ Link{
   text-align: center;
 }
 
-@media only screen and (max-width: 453px) {
+@media only screen and (max-width: 527px) {
   html{
+    font-size: 14px ;
+  }
+  .options{
     font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .options{
+    font-size: 13px;
   }
 }
