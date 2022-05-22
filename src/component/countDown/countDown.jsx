@@ -1,31 +1,42 @@
+import { useTimer } from 'use-timer';
+import { useEffect } from 'react';
 
-import { useEffect, useState } from "react";
-
-var counterId;
-const CountDown = ({data}) => {
-
-    const [time, setTime] = useState(0);
-    const { setTimeEnd } = data;
-
-    useEffect(() => {
-        counterId = setInterval(() => {
-            setTime(pre => pre + 1);
-        }, 1000)
-        if (counterId%2 !== 0) {
-            clearInterval(counterId)
+const CountDown = ({ data }) => {
+    
+    const {setTimeEnd } = data;
+    const { time, start,reset } = useTimer({
+        initialTime: 20,
+        endTime: 0,
+        timerType: "DECREMENTAL",
+        onTimeOver: () => { 
+            setTimeEnd("END PAGE")
+            start();
         }
-    },[]);
+      });
+    
+      useEffect(()=>{
+        start();
+      }, [start])
 
-    if (time === 100  ) {
-        clearInterval(counterId);
-        setTimeEnd(true)
-    };
+      setTimeEnd(prev => {
+          if (prev === "NEXT PAGE") {
+              reset();
+              start();
+          }
+      })
+    
+
+      console.log(time)
 
     return (
         <div>
-            <div style={{fontSize:"22px"}}>Time Limit {time}
+            <div style={{ fontSize: "22px" }}>Time Limit {time}
                 <span>
-                     {time % 2 === 0 ? <i className="fa fa-hourglass-start"></i> : <i className="fa fa-hourglass-end"></i>}
+                    {time % 2 === 0 ?
+                        <i className="fa fa-hourglass-start"></i>
+                        :
+                        <i className="fa fa-hourglass-end"></i>
+                    }
                 </span>
             </div>
         </div>

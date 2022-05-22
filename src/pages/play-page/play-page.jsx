@@ -7,7 +7,7 @@ import { useScoreContext } from "../../contexts/score-context";
 
 const PlayPage = () => {
 
-    const [timeEnd, setTimeEnd] = useState(false);
+    const [timeEnd, setTimeEnd] = useState("START");
     const [nextQues, setNextQues] = useState(0);
     const [answer, setAnswer] = useState("");
 
@@ -20,17 +20,21 @@ const PlayPage = () => {
     const questionsArr = specificGame.questionAndAnswer[nextQues];
 
     const changePage = () => {
+        setTimeEnd("NEXT PAGE");
         setNextQues(nextQues + 1);
         dispatchScore({ type: "ANSWER", payload: answer })
     }
 
-    if(timeEnd || nextQues === 5) {
+    if (timeEnd === "END PAGE") {
+        changePage();
+        setTimeEnd("START");
+    } else if (nextQues === 5) {
         navigate(`/result/${gameName}`)
     }
 
     return (
         <div className="playPage-container margin-small">
-            <div className="margin-Xsmall"><CountDown data={{ setTimeEnd }} /></div>
+            <div className="margin-Xsmall"><CountDown  data={ {setTimeEnd }} /></div>
             <div className="questionCount">{nextQues + 1}/5</div>
             <div className="jstfy-centre flex-column align-centre margin-Xsmall">
                 <h3>{nextQues + 1}. {questionsArr.question}</h3>

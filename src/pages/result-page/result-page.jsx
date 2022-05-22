@@ -1,12 +1,10 @@
 import "./result-page.css";
 import { useParams } from "react-router-dom";
-// import { useState } from "react";
 import { useDataContext } from "../../contexts/data-context";
 import { useScoreContext } from "../../contexts/score-context";
 
 const ResultPage = () => {
     const { gameName } = useParams();
-    // const [totleScore, setTotleScore] = useState(0);
     const { dataBasearr } = useDataContext();
     const { score } = useScoreContext();
     const specificGame = dataBasearr.find(item => item.gameName === gameName);

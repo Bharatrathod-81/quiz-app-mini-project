@@ -58,7 +58,7 @@ const DataBaseProvider = ({ children }) => {
                 {
                     question:"Which of the following is must for the API in React.js ?",
                     options: ["SetinitialComponent","renderComponent","render"],
-                    answer: " "
+                    answer: "renderComponent"
                 },
                 {
                     question:"Which of the following is used to render components in web pages ?",
