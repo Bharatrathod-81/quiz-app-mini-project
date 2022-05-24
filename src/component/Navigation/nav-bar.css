@@ -1,10 +1,12 @@
 .nav-body{
     background-color: var(--primary-color);
-    padding: 1rem 3rem;
+    padding: 1rem;
     position: sticky;
     top: 0%;
     z-index: 2;
+    border:2px solid ;
 }
+
 
 
 .login-Btn{
@@ -18,3 +20,4 @@
 .profile-icon{
     font-size: 29px;
 }
+

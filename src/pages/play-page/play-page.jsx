@@ -9,12 +9,12 @@ const PlayPage = () => {
 
     const [timeEnd, setTimeEnd] = useState("START");
     const [nextQues, setNextQues] = useState(0);
-    const [answer, setAnswer] = useState("");
+    const [answer, setAnswer] = useState([]);
 
     const { gameName } = useParams();
     let navigate = useNavigate();
     const { dataBasearr } = useDataContext();
-    const { dispatchScore } = useScoreContext();
+    const { score : { userName, id}, dispatchScore } = useScoreContext();
 
     const specificGame = dataBasearr.find(item => item.gameName === gameName);
     const questionsArr = specificGame.questionAndAnswer[nextQues];
@@ -22,13 +22,14 @@ const PlayPage = () => {
     const changePage = () => {
         setTimeEnd("NEXT PAGE");
         setNextQues(nextQues + 1);
-        dispatchScore({ type: "ANSWER", payload: answer })
     }
+
 
     if (timeEnd === "END PAGE") {
         changePage();
         setTimeEnd("START");
     } else if (nextQues === 5) {
+        dispatchScore({ type: "ANSWER", payload: {id:id,name:userName,answer:answer} })
         navigate(`/result/${gameName}`)
     }
 
@@ -43,7 +44,7 @@ const PlayPage = () => {
                         return (
                             <button className="options margin-small padding-small"
                                 key={item}
-                                onClick={() => setAnswer(item)}
+                                onClick={() => setAnswer(prev => [...prev,item])}
                             >{item}</button>
                         )
                     })}
@@ -55,5 +56,6 @@ const PlayPage = () => {
         </div>
     )
 }
+
 
 export default PlayPage;

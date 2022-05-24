@@ -26,7 +26,7 @@ const CountDown = ({ data }) => {
       })
     
 
-      console.log(time)
+    
 
     return (
         <div>

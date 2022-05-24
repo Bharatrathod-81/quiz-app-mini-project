@@ -6,16 +6,23 @@ const ScoreContextProvider =({ children }) => {
 
     const scoreReducer = (state,action) => {
         switch (action.type) {
+            case "USER NAME":
+                return{...state,userName:action.payload.name,id:action.payload.id}
             case "ANSWER" :
-                return{...state,usersAns:[...state.usersAns,action.payload]};
-            
+                if (state.usersAns.some(item => item.id === action.payload.id)){
+                     return{...state};
+                }else{
+                    return{...state,usersAns:[...state.usersAns,{...action.payload}]};
+                };
             default:
                 return state;
         }
     }
 
     const [score, dispatchScore] = useReducer(scoreReducer,{
-        usersAns:[],
+        usersAns:[{name:"",answer:[]}],
+        userName:"",
+        id:""
     })
 
     return(

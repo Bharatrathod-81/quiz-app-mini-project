@@ -7,12 +7,15 @@ const ResultPage = () => {
     const { gameName } = useParams();
     const { dataBasearr } = useDataContext();
     const { score } = useScoreContext();
+
     const specificGame = dataBasearr.find(item => item.gameName === gameName);
     const questionsArr = specificGame.questionAndAnswer;
-    const totalScore = questionsArr.filter(item => score.usersAns.includes(item.answer));
+    const checkUser = score.usersAns.find(item => item.name === score.userName);
+    const totalScore = questionsArr.filter(item => checkUser.answer.includes(item.answer));
 
     return (
         <div>
+            <h3>{checkUser.name}</h3>
             <h3>Your Score is {totalScore.length} of 5</h3>
             {questionsArr.map(item => {
                 return (
@@ -22,7 +25,7 @@ const ResultPage = () => {
                             {item.options.map(data => {
                                 if (item.answer === data) {
                                     return <div className="correct-result margin-small padding-small" key={data} >{data}</div>
-                                } else if (score.usersAns.includes(data)) {
+                                } else if (checkUser.answer.includes(data)) {
                                     return <div className="wrong-result margin-small padding-small" key={data} >{data}</div>
                                 } else {
                                     return <div className="result-option margin-small padding-small" key={data} >{data}</div>

@@ -1,4 +1,10 @@
-
+.name{
+    width:28rem ;
+    height: 4vh;
+    border: 2px solid var(--primary-color);
+    border-radius: 0.2rem;
+    box-sizing: border-box;
+}
 
 .rule-text{
     background-color: rgba(194, 192, 192, 0.43);

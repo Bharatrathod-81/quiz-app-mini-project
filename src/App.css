@@ -20,6 +20,25 @@ Link{
   cursor: pointer;
 }
 
+a{
+  text-decoration: none;
+}
+
 .App {
   text-align: center;
+}
+
+@media only screen and (max-width: 527px) {
+  html{
+    font-size: 14px ;
+  }
+  .options{
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .options{
+    font-size: 13px;
+  }
 }
