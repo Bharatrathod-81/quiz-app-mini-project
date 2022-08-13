@@ -5,10 +5,10 @@ import { useScoreContext } from "../../contexts/score-context";
 
 const ResultPage = () => {
     const { gameName } = useParams();
-    const { dataBasearr } = useDataContext();
+    const { dataBaseArray } = useDataContext();
     const { score } = useScoreContext();
 
-    const specificGame = dataBasearr.find(item => item.gameName === gameName);
+    const specificGame = dataBaseArray.find(item => item.gameName === gameName);
     const questionsArr = specificGame.questionAndAnswer;
     const checkUser = score.usersAns.find(item => item.name === score.userName);
     const totalScore = questionsArr.filter(item => checkUser.answer.includes(item.answer));

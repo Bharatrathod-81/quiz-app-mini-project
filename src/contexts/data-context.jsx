@@ -4,9 +4,9 @@ const dataContext = createContext();
 
 const DataBaseProvider = ({ children }) => {
 
-    const dataBasearr =[
+    const dataBaseArray =[
         {
-            gameName:"javaScript",
+            gameName:"javascript",
             image:"/images/javaScript-icon.png",
             questionAndAnswer:[
                 {
@@ -70,7 +70,7 @@ const DataBaseProvider = ({ children }) => {
     ];
 
     return(
-        <dataContext.Provider value={{ dataBasearr }}>
+        <dataContext.Provider value={{ dataBaseArray }}>
             {children}
         </dataContext.Provider>
     )

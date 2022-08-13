@@ -13,10 +13,10 @@ const PlayPage = () => {
 
     const { gameName } = useParams();
     let navigate = useNavigate();
-    const { dataBasearr } = useDataContext();
+    const { dataBaseArray } = useDataContext();
     const { score : { userName, id}, dispatchScore } = useScoreContext();
 
-    const specificGame = dataBasearr.find(item => item.gameName === gameName);
+    const specificGame = dataBaseArray.find(item => item.gameName === gameName);
     const questionsArr = specificGame.questionAndAnswer[nextQues];
 
     const changePage = () => {
