@@ -6,10 +6,9 @@ import { useState } from "react";
 import { useScoreContext } from "../../contexts/score-context";
 
 const PlayPage = () => {
-
-    const [timeEnd, setTimeEnd] = useState("START");
+    const [timeEnd, setTimeEnd] = useState<string>("START");
     const [nextQues, setNextQues] = useState(0);
-    const [answer, setAnswer] = useState([]);
+    const [answer, setAnswer] = useState<string[]>([]);
 
     const { gameName } = useParams();
     let navigate = useNavigate();
@@ -17,7 +16,7 @@ const PlayPage = () => {
     const { score : { userName, id}, dispatchScore } = useScoreContext();
 
     const specificGame = dataBaseArray.find(item => item.gameName === gameName);
-    const questionsArr = specificGame.questionAndAnswer[nextQues];
+    const questionsArr = specificGame?.questionAndAnswer[nextQues];
 
     const changePage = () => {
         setTimeEnd("NEXT PAGE");
@@ -35,12 +34,12 @@ const PlayPage = () => {
 
     return (
         <div className="playPage-container margin-small">
-            <div className="margin-Xsmall"><CountDown  data={ {setTimeEnd }} /></div>
+            <div className="margin-Xsmall"><CountDown  data={{setTimeEnd,timeEnd}} /></div>
             <div className="questionCount">{nextQues + 1}/5</div>
             <div className="jstfy-centre flex-column align-centre margin-Xsmall">
-                <h3>{nextQues + 1}. {questionsArr.question}</h3>
+                <h3>{nextQues + 1}. {questionsArr?.question}</h3>
                 <div className="option-container jstfy-centre flex-column align-centre">
-                    {questionsArr.options.map(item => {
+                    {questionsArr?.options.map(item => {
                         return (
                             <button className="options margin-small padding-small"
                                 key={item}

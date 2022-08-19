@@ -1,10 +1,11 @@
 import { createContext ,useContext, useReducer } from "react";
+import { ScoreActionType, scoreReducerType, ReactChildren , ScoreType} from "../type-script/context-types"; 
 
-const scoreContext = createContext();
+const scoreContext = createContext({} as scoreReducerType);
 
-const ScoreContextProvider =({ children }) => {
-
-    const scoreReducer = (state,action) => {
+const ScoreContextProvider =({ children }: ReactChildren) => {
+    
+    const scoreReducer = (state:ScoreType, action:ScoreActionType) => {
         switch (action.type) {
             case "USER NAME":
                 return{...state,userName:action.payload.name,id:action.payload.id}
@@ -18,12 +19,13 @@ const ScoreContextProvider =({ children }) => {
                 return state;
         }
     }
-
-    const [score, dispatchScore] = useReducer(scoreReducer,{
-        usersAns:[{name:"",answer:[]}],
+    
+    const initialValue: ScoreType = {
+        usersAns:[{name:"",answer:[],id:""}],
         userName:"",
         id:""
-    })
+    }
+    const [score, dispatchScore] = useReducer(scoreReducer,initialValue)
 
     return(
         <scoreContext.Provider value={{score, dispatchScore}}>

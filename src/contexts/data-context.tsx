@@ -1,10 +1,11 @@
 import { createContext, useContext } from "react";
+import { Data, ReactChildren, dataContextType } from "../type-script/context-types"
 
-const dataContext = createContext();
+const dataContext = createContext({} as dataContextType);
 
-const DataBaseProvider = ({ children }) => {
+const DataBaseProvider = ({ children }: ReactChildren ) => {
 
-    const dataBaseArray =[
+    const dataBaseArray: Data[] =[
         {
             gameName:"javascript",
             image:"/images/javaScript-icon.png",

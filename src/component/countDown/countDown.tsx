@@ -1,32 +1,43 @@
 import { useTimer } from 'use-timer';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
-const CountDown = ({ data }) => {
-    
-    const {setTimeEnd } = data;
-    const { time, start,reset } = useTimer({
+type SetState = "START" | "END PAGE" | "NEXT PAGE";
+
+type PropsType = {
+    data: {
+        setTimeEnd:React.Dispatch<SetState>;
+        timeEnd: string;
+    }
+};
+
+const CountDown = ({ data }: PropsType) => {
+
+    const { setTimeEnd,timeEnd } = data;
+    const { time, start, reset } = useTimer({
         initialTime: 20,
         endTime: 0,
         timerType: "DECREMENTAL",
-        onTimeOver: () => { 
+        onTimeOver: () => {
             setTimeEnd("END PAGE")
             start();
         }
-      });
-    
-      useEffect(()=>{
+    });
+
+    useEffect(() => {
         start();
-      }, [start])
-
-      setTimeEnd(prev => {
-          if (prev === "NEXT PAGE") {
-              reset();
-              start();
-          }
-      })
+    }, [start]);
     
+    useEffect(() => {
+        if (timeEnd === "NEXT PAGE"){
+            setTimeEnd("START")
+            reset();
+            start();
+        };
+    },[timeEnd])
 
-    
+
+
+
 
     return (
         <div>
