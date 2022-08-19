@@ -1,5 +1,23 @@
 # Getting Started with Create React App
 
+## Features
+- Home page with a list of all Games
+- Play Page
+- Timer on a play page
+
+## Pages
+- Home page
+- Rules Page
+- Play Page
+- Result Page
+
+## Using Stack
+- React.js
+- React Router
+- Context API
+- Type-Script
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
