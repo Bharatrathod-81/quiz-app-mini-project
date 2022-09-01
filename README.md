@@ -22,8 +22,10 @@
 #### To install TS go through this site
 - https://create-react-app.dev/docs/adding-typescript/
 #### Install tsconfig.json 
-`tsc --init`
-- **Copy the code from tsconfig.json file**
+- `tsc --init`
+### Add the compiler argument codes to tsconfig.json file
+- ``` sdff```
+
  
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
