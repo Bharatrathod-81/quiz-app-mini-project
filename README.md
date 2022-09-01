@@ -23,7 +23,7 @@
 - https://create-react-app.dev/docs/adding-typescript/
 #### Install tsconfig.json 
 - `tsc --init`
-#### Replace the compiler argument codes by this codes in tsconfig.json file
+#### Replace the compiler argument codes with these codes in the tsconfig.json file
 - ``` {
   "compilerOptions": {
     "target": "es5",
