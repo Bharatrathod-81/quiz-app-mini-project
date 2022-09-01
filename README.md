@@ -20,8 +20,7 @@
 
 ## Command to install Type-Script
 - https://create-react-app.dev/docs/adding-typescript/
-- **Install tsconfig.json**
-- tsc --init
+- **Install tsconfig.json** = `tsc --init`
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
