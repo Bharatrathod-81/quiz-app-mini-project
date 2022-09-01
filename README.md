@@ -16,10 +16,11 @@
 - React Router
 - Context API
 - Type-Script
--- df 
+
 
 ## Command to install Type-Script
 - https://create-react-app.dev/docs/adding-typescript/
+- **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
