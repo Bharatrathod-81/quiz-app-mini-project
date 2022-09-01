@@ -19,8 +19,9 @@
 
 
 ## Command to install Type-Script
+#### To install TS go through this site
 - https://create-react-app.dev/docs/adding-typescript/
-- #### Install tsconfig.json 
+#### Install tsconfig.json 
 `tsc --init`
 - **Copy the code from tsconfig.json file**
  
