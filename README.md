@@ -20,7 +20,8 @@
 
 ## Command to install Type-Script
 - https://create-react-app.dev/docs/adding-typescript/
-- **Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Install tsconfig.json**
+- tsc --init
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
