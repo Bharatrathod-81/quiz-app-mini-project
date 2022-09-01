@@ -20,34 +20,9 @@
 
 ## Command to install Type-Script
 - https://create-react-app.dev/docs/adding-typescript/
-- **Install tsconfig.json** = `tsc --init`
-- ### `Add compiler arguments in tsconfig.json`
-`{
-  "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
-  },
-  "include": [
-    "src"
-  ]
-}`
+- #### Install tsconfig.json 
+`tsc --init`
+- **Copy the code from tsconfig.json file**
  
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
