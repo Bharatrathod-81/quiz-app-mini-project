@@ -24,8 +24,7 @@
 #### Install tsconfig.json 
 - `tsc --init`
 #### Replace the compiler argument codes with these codes in the tsconfig.json file
-- ``` 
-{
+- ``` {
   "compilerOptions": {
     "target": "es5",
     "lib": [
