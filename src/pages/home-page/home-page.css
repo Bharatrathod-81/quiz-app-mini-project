@@ -17,7 +17,7 @@
     background-color: var(--card-color);
     border-radius: 0.5rem;
     width: 20.5rem;
-    height: 33vh;
+/*     height: 33vh; */
     cursor: pointer;
 }
 
